@@ -1,0 +1,359 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Desplazamiento suave al hacer clic en los enlaces */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #f4f4f4;
+    background-color: #1a1a1a;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #000000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Efecto <O-Dev> automático usando CSS */
+.navbar .logo a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-shadow: 0px 0px 4px #007bff;
+}
+
+.navbar .logo a:hover {
+    color: #0056b3;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #007bff;
+}
+
+.burger-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh; /* Bajado a 70vh para dar paso a las siguientes secciones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 3px #fff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px; /* Evita que el texto del hero se estire demasiado */
+}
+
+/* Clases de utilidad para las Nuevas Secciones (Sobre mí y Portafolio) */
+.section-padding {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #007bff; /* Color de acento para los títulos */
+    text-shadow: 0px 0px 3px #007bff;
+
+}
+
+.personal-card {
+    background: #252525;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 5px solid #bb00ff;
+}
+
+.personal-card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Estilo para mis proyectos en el Portafolio */
+.project-card {
+    background: #252525;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 5px solid #007bff; /* Detalle visual en el borde */
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Estilo para mi Stack Tecnológico */
+.stack-card {
+    background: #252525;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border-left: 5px solid #ff0000; /* Detalle visual en el borde */
+}
+
+.stack-card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.stack-li {
+    padding-left: 25px;
+}
+
+/* Componentes */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px #007bff;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+    box-shadow: 0px 0px 2px #007bff;
+}
+
+/* Ventana Emergente de Éxito */
+.toast {
+    position: fixed !important;
+    bottom: 40px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(20px) !important;
+    background-color: #252525 !important; /* Mismo tono gris oscuro de tus tarjetas */
+    color: #ffffff !important;
+    padding: 14px 30px !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8) !important;
+    border-bottom: 4px solid #007bff !important; /* Tu color azul neón */
+    z-index: 999999 !important; /* Prioridad de capa máxima */
+    
+    /* Estado invisible por defecto */
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease !important;
+}
+
+/* Estado Activo gatillado por JavaScript */
+.toast.mostrar {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) translateY(0) !important; /* Sube suavemente a su posición */
+}
+
+.toast i {
+    color: #28a745; /* Verde estándar de éxito/confirmación */
+    margin-right: 10px; /* Separación horizontal con el texto */
+    font-size: 1.1rem; /* Un tamaño ligeramente destacado */
+    text-shadow: 0px 0px 5px rgba(40, 167, 69, 0.5); /* Efecto de brillo neón sutil */
+}
+
+#copiar-email {
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#copiar-email:hover {
+    color: #007bff; /* Tu color azul de acento */
+    text-shadow: 0px 0px 4px #007bff; /* Mismo efecto neón de tus títulos */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: #000000;
+    color: #888;
+    border-top: 1px solid #222;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+    }
+
+    .navbar {
+        flex-direction: row; /* Mantiene el logo y el botón alineados horizontalmente */
+        justify-content: space-between;
+        padding: 1rem 5%;
+    }
+
+    .navbar nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px; /* Ancho del menú lateral */
+        height: 100vh; /* Ocupa todo el alto de la pantalla */
+        background: #000000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.6);
+        padding-top: 80px; /* Espacio para que los enlaces no choquen con el botón */
+        z-index: 1001;
+        
+        /* Estado inicial: Escondido completamente a la derecha */
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Clase activa gatillada por JavaScript */
+    .navbar nav.activo {
+        transform: translateX(0);
+    }
+
+    .navbar ul {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna limpia */
+        text-align: left;
+        padding: 2rem;
+        gap: 10px; /* Separación constante entre filas */
+    }
+
+    .navbar ul li {
+        margin-left: 0; /* Limpiamos el margen de escritorio */
+        padding: 10px 0;
+        opacity: 1;
+    }
+
+    .navbar ul li a {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 500;
+        border-left: 3px solid transparent;
+        padding-left: 10px;
+        transition: border-left 0.3s, color 0.3s;
+    }
+
+    /* Detalle interactivo al pasar el cursor sobre los enlaces del menú */
+    .navbar ul li a:hover {
+        color: #007bff;
+        border-left: 3px solid #007bff; /* Línea de acento azul neón */
+    }
+
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px; /* Determina la separación total de la burger-grid */
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1002;
+    }
+
+    .burger-menu .linea {
+        width: 100%;
+        height: 2px; /* Grosor del contorno de la línea */
+        background-color: #fff !important;
+        border-radius: 4px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .burger-menu:active .linea {
+        background-color: #007bff !important;
+    }
+
+    .burger-menu.abierto .linea:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .burger-menu.abierto .linea:nth-child(2) {
+        opacity: 0; /* Hace invisible la línea del medio */
+    }
+    
+    .burger-menu.abierto .linea:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-padding {
+        padding: 50px 20px; /* Espaciado más pequeño en pantallas móviles */
+    }
+
+    .toast {
+        width: 320px;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Oliver Martínez</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+   <!-- Barra de Navegación -->
+   <header class="navbar">
+      <div class="logo"><a href="#">&lt;O-Dev&gt;</a></div>
+      <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+         <span class="linea"></span>
+         <span class="linea"></span>
+         <span class="linea"></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu">
+         <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#tecnologias">Tecnologías</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+         </ul>
+     </nav>
+   </header>
+
+   <!-- Sección Principal / Hero -->
+   <section class="hero">
+      <div class="hero-content">
+         <h1>¡Hola!, soy Oliver.</h1>
+         <p>Alguien apasionado por crear soluciones eficientes.<br>
+            ¿Quieres conocer más de mí?, ¡pulsa el botón de abajo!</p>
+         <a href="#sobre-mi" class="btn">Conocer más sobre mí.</a>
+      </div>
+   </section>
+
+   <!-- Sección Sobre Mí -->
+   <section id="sobre-mi" class="section-padding">
+      <div class="container">
+         <h2>Sobre mí</h2>
+         <p style="font-size: 18px;">Soy un Junior Full-Stack Developer enfocado en construir herramientas web funcionales que resuelvan problemas actuales en el mercado e interacción de datos.<br>
+         <div style="padding-top: 20px; font-size: 18px;">Mi mentalidad está orientada a la práctica, considero que la mejor forma de dominar una tecnología es llevándola a la realidad. Un ejemplo de ello son mis proyectos realizados hasta ahora, los cuales son soluciones diseñadas para procesar y optimizar el manejo de flujos de datos.<br></div>
+         <div style="padding-top: 20px; font-size: 18px;">Disfruto del reto que representa conectar una interfaz limpia y responsiva (Frontend) con una arquitectura lógica y eficiente en el servidor (Backend). Constantemente estoy actualizando mis habilidades técnicas para adaptarme a las demandas de los entornos modernos de desarrollo.<br></div></p>
+         <div class="personal-card">
+               <h3>Entonces...</h3>
+               <p>Si buscas un desarrollador con iniciativa, capacidad de aprendizaje rápido y pasión por escribir código limpio, puedes contactarme pulsando el botón de abajo.</p>
+               <div style="padding-top: 20px;"><a href="#contacto" class="btn-small">¡Contactar Ahora!</a></div>
+            </div>
+            <div style="padding-top: 20px;"><a href="https://github.com/oliversmd" class="btn" style="background: #fff; color: #000; box-shadow: 0px 0px 4px #fff;">Visita a mi perfil de GitHub</a></div>
+      </div>
+   </section>
+
+   <!-- Sección Portafolio -->
+   <section id="portafolio" class="section-padding">
+      <div class="container">
+         <h2>Portafolio</h2>
+         <p style="font-size: 18px;">Proyectos alineados con mi perfil en el mercado que han demostrado gran eficiencia.</p>
+         
+         <!-- Tarjeta de Proyecto -->
+         <div class="project-card">
+            <h3>Binance P2P Tool</h3>
+            <p>Esta fue una herramienta encargada de analizar el mercado P2P actual de Binance. Dicha aplicación aún no tiene una versión pública disponible, por lo que tampoco está disponible su código fuente en mi perfil de GitHub.</p>
+         </div>
+
+         <div class="project-card">
+            <h3>Registrador de Pagos</h3>
+            <p>Esta fue una herramienta encargada de registrar datos de pagos recibidos, guardando estos en un archivo de formato ".xlsx" para visualizarnos en una tabla de Microsoft Excel. Dicha aplicación aún no tiene una versión pública disponible, por lo que tampoco está disponible su código fuente en mi perfil de GitHub.</p>
+         </div>
+
+         <div class="project-card">
+            <h3>Portal de Herramientas.</h3>
+            <p>Esta fue una landing page para recomendar IAs, Herramientas, Lenguajes, Frameworks y más a la Comunidad Estudiantil de Desarrolladores de la Universidad de Oriente (Núcleo de Monagas).</p>
+            <div style="padding-top: 20px;"><a href="https://victormfr.github.io/RepositorioDesarrolladoresUDO/" class="btn">Probar Herramienta</a></div>
+         </div>
+      </div>
+   </section>
+
+   <section id="tecnologias" class="section-padding">
+      <div class="container">
+         <h2>Tecnologías</h2>
+         <p style="font-size: 18px;">Mi Stack Tecnológico:</p>
+
+         <div class="stack-card">
+            <h3>FrontEnd</h3>
+            <div class="stack-li">
+               <li>HTML5</li>
+               <li>CSS3</li>
+               <li>JavaScript (ES6+)</li>
+               <li>Responsive Design</li>
+            </div>
+
+            <h3 style="padding-top: 20px;">Frameworks</h3>
+            <div class="stack-li">
+               <li>React (JavaScript)</li>
+            </div>
+         </div>
+
+         <div class="stack-card">
+            <h3>BackEnd</h3>
+            <div class="stack-li">
+               <li>Node.js</li>
+               <li>Python</li>
+               <li>PHP</li>
+            </div>
+
+            <h3 style="padding-top: 20px;">Frameworks</h3>
+            <div class="stack-li">
+               <li>Django</li>
+               <li>Flask</li>
+               <li>Express.js</li>
+            </div>
+         </div>
+
+         <div class="stack-card">
+            <h3>Control de Versiones</h3>
+            <div class="stack-li">
+               <li>Git</li>
+               <li>GitHub</li>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section id="contacto" class="section-padding">
+      <div class="container">
+         <h2>Contacto</h2>
+         <div style="text-align: center; width: 100%;">
+             <a href="https://linkedin.com/in/olivermartinez1210" target="_blank" style="display: inline-block; text-decoration: none;">
+               <i class="fab fa-linkedin fa-10x" style="color: #007bff;"></i>
+            </a>
+            <p style="text-align: center;">¡Conectemos en LinkedIn!</p>
+         </div>
+         <div style="padding-top: 120px; text-align: center; width: 100%;">
+             <a href="mailto:martinezd.olivers@gmail.com" target="_blank" style="display: inline-block; text-decoration: none;">
+               <i class="fas fa-envelope fa-10x" style="color: #007bff;"></i>
+            </a>
+            <p style="text-align: center;">¡Escríbeme a <span id="copiar-email">martinezd.olivers@gmail.com</span>!</p>
+         </div>
+      </div>
+   </section>
+
+   <!-- Pie de Página -->
+   <footer class="footer">
+      <p>&copy; 2026 Oliver Martínez. Todos los derechos reservados.</p>
+      <div style="display: flex; justify-content: center; gap: 20px; padding-top: 2px; font-size: 25px;">
+         <a href="https://github.com/oliversmd" style="text-decoration: none; color: inherit;"><i class="fab fa-github"></i></a>
+         <a href="https://www.linkedin.com/in/olivermartinez1210/" style="text-decoration: none; color: inherit;"><i class="fab fa-linkedin"></i></a>
+      </div>
+   </footer>
+   <div id="toast" class="toast"><i class="far fa-check-circle"></i>¡Correo copiado con éxito!</div>
+   <script src="./script.js"></script>
+</body>
+</html>
