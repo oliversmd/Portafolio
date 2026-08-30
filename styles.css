@@ -170,8 +170,12 @@ body {
     color: #fff;
 }
 
+.stack-card h4 {
+    padding-left: 10px;
+}
+
 .stack-li {
-    padding-left: 25px;
+    padding-left: 50px;
 }
 
 /* Componentes */
